@@ -1,0 +1,27 @@
+.bg-gradient {
+  border-radius: 0px 0px 12px 12px;
+  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background: #CACADB;
+    height: 10px;
+    width: calc(100vw - 40px);
+    left: 20px;
+    border-radius: 0 0 12px 12px;
+    bottom: -10px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background: #E7E7F2;
+    height: 10px;
+    width: calc(100vw - 80px);
+    left: 40px;
+    border-radius: 0 0 12px 12px;
+    bottom: -20px;
+  }
+}

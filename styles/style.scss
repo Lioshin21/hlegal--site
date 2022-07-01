@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  font-size: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 38px;
+  line-height: 46px;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 37px;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 27px;
+}
+
+h4 {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.main {
+  background: no-repeat center url('../images/bg-image.svg');
+  background-size: cover;
+}
+@import './scss/bg-gradient';
+@import './scss/main';
+@import './scss/header/header';
+@import './scss/skills';
+@import './scss/services/services';
+@import './scss/team';
+@import './scss/brands';
+@import './scss/public';
+@import './scss/footer/footer-border';

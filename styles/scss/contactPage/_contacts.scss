@@ -1,0 +1,132 @@
+$small-size: 30px;
+
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts {
+  @extend %flex-column;
+  margin: $small-size;
+  gap: 30px;
+  font-weight: 700;
+}
+
+
+.info {
+  @extend %flex-column;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 30px;
+  
+
+  &__address {
+    color: #323264;
+    padding-bottom: $small-size;
+    margin-bottom: $small-size;
+    border-bottom: 4px solid #E6E6F0;
+  }
+
+  &__tel {
+    align-self: flex-start;
+    color: #46466E;
+  }
+
+  &__mail {
+    align-self: flex-start;
+    margin-top: 15px;
+    color: #24A3FF;
+  }
+
+  &__facebook {
+    &-wrapper {
+      margin-top: $small-size;
+      padding-top: $small-size;
+      border-top: 4px solid #E6E6F0;
+    }
+
+    display: flex;
+    align-items: center;
+    width: 153px;
+
+    & svg {
+      flex-shrink: 0;
+      margin-right: 10px;
+    }
+
+    & span {
+      font-size: 12px;
+      line-height: 16px;
+      color: #24A3FF;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      & path {
+        fill: #F0145A;
+      }
+
+      & span {
+        color: #F0145A;
+      }
+    }
+  }
+}
+
+.form {
+  @extend %flex-column;
+  gap: $small-size;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #000;
+  padding: $small-size;
+  background: #F5F5FA;
+  border-radius: 12px;
+
+  & input:not(.button-blue), textarea {
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    padding: 15px;
+
+    &::placeholder {
+      color: #B3B3BA;
+    }
+
+    &:focus {
+      border: 1px solid #24A3FF;
+    }
+
+    & #message {
+      height: 130px;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    line-height: 37px;
+    background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  &__message {
+    @extend %flex-column;
+    gap: 15px;
+  }
+
+  &__feedback {
+    @extend %flex-column;
+    gap: 15px;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #B3B3BA;
+  }
+}

@@ -1,0 +1,76 @@
+@import './header';
+
+.header {
+  &__contacts {
+    background: #F5F5FA;
+  }
+
+  &__tel {
+    color: #B3B3BA;
+  }
+
+  &__lang {
+    &:not(.header__lang-active) {
+      color: #B3B3BA;
+    }
+
+    &:not(.header__lang-active):hover {
+      background: #F5F5FA;
+    }
+  }
+
+  &__title {
+    color: #323264;
+  }
+}
+
+.nav__link {
+  color: #24A3FF;
+}
+
+.burger-nav {
+  &__line {
+    background: #323264;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  .header__contacts {
+    background: transparent;
+  }
+
+  .nav__item:hover {
+    border-bottom: 2px solid #24A3FF;
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .header {
+    position: relative;
+    align-items: flex-end;
+    padding: 50px 60px 0;
+
+    &__logo {
+      margin: 0;
+      top: 50px;
+      left: 60px;
+      position: absolute;
+    }
+
+    &__nav {
+      margin-top: 16px;
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .header {
+    padding: 50px 160px 0;
+
+    &__logo {
+      left: 160px;
+    }
+  }
+}

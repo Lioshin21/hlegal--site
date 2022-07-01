@@ -1,0 +1,141 @@
+$min-size: 30px;
+$size: 60px;
+
+.teammates {
+  margin: $min-size $min-size $size;
+
+  &__title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: $min-size;
+  }
+
+  &__link {
+    display: flex;
+    flex-wrap: wrap;
+    transition: all 0.3s linear;
+
+    &:hover {
+      transform: scale(1.2);
+  
+      .teammates__name {
+        color: #F0145A;
+      }
+  
+      .teammates__button path {
+        stroke: #F0145A;
+      }
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  &__info {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-basis: 100%;
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #323264;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #F5F5FA;
+  }
+
+  &__position {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #B3B3BA;
+    flex-basis: 100%;
+  }
+
+  &__item {
+    & + & {
+      margin-top: $min-size;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .teammates {
+    margin: $size;
+
+    &__title {
+      font-size: 38px;
+      line-height: 46px;
+    }
+
+    &__list {
+      margin-top: $size;
+      justify-content: space-between;
+    }
+
+    &__item {
+      flex-basis: calc((100% - 60px) / 2);
+
+      &+& {
+        margin-top: $size;
+      }
+
+      &:nth-child(2) {
+        margin-top: 0;
+      }
+    }
+    
+    &__photo {
+      height: 400px;
+      object-fit: cover;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .teammates {
+
+    &__title {
+      margin: 0 120px;
+    }
+
+    &__item {
+      flex-basis: calc((100% - 120px) / 3);
+
+      &:nth-child(3) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .teammates {
+    margin: $size 160px;
+  }
+}

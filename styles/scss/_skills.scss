@@ -1,0 +1,170 @@
+$indent: 30px;
+$indent-big: 60px;
+
+.skills {
+  display: flex;
+  flex-direction: column;
+
+  &__list {
+    display: flex;
+    list-style-type: none;
+    margin: $indent 0;
+    margin-left: $indent;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  &__item {
+    flex-shrink: 0;
+
+    & .link-active {
+      display: block;
+      background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    & + & {
+      margin-left: $indent;
+    }
+  }
+
+  &__link {
+    color: #B3B3BA;
+    text-decoration: none;
+
+    &:hover {
+      color: #F0145A;
+    }
+  }
+
+  &-description {
+
+    &__list {
+      margin: 0 $indent;
+      padding: $indent 0;
+      border-top: 4px solid rgba(255, 255, 255, 0.3);
+      list-style-type: none;
+    }
+
+    &__item {
+      display: none;
+
+      &:nth-child(1) {
+        display: block;
+      }
+
+      &_title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      & p {
+        margin-top: $indent;
+        font-size: 19px;
+        line-height: $indent;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .skills {
+
+    &__list {
+      margin: $indent-big 0 $indent-big $indent-big;
+    }
+
+    &__link h2 {
+      font-weight: 700;
+      font-size: 38px;
+      line-height: 46px;
+    }
+
+    &-description {
+
+      &__list {
+        margin: 0 $indent-big;
+        padding: $indent-big 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .skills {
+    flex-direction: row;
+    padding: $indent-big;
+    align-items: center;
+
+    &__list {
+      align-items: flex-end;
+      flex-direction: column;
+      flex-shrink: 0;
+      flex-basis: 50%;
+      margin: 0;
+      padding-right: 47px;
+    }
+    &__item {
+      flex-shrink: 0;
+    }
+
+    &__item + &__item {
+      margin-top: $indent;
+    }
+
+    &-description {
+
+      &__list {
+        margin: 0;
+        padding: 9.5px 0;
+        padding-left: $indent-big;
+        border-top: 0;
+        border-left: 4px solid rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .skills {
+    padding: $indent-big 180px;
+
+    &__list {
+      padding-right: $indent-big;
+    }
+
+    &-description {
+
+      &__list {
+        padding: 43px 0;
+        padding-left: $indent-big;
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 1920px) {
+  .skills {
+    padding: $indent-big 280px;
+
+    &__list {
+      flex-basis: content;
+    }
+
+    &-description {
+
+      &__list {
+        padding: 73px 0;
+        padding-left: $indent-big;
+      }
+    }
+  }
+}

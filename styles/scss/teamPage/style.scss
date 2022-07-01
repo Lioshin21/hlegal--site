@@ -1,0 +1,20 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  font-size: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+@import '../header/header-white';
+@import '../header/header-sub';
+@import '../footer/footer';
+@import './teammates';

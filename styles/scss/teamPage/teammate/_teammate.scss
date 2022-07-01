@@ -1,0 +1,143 @@
+$small-size: 30px;
+$size: 60px;
+
+%standard-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+%blue-link {
+  @extend %standard-text;
+  color: #24A3FF;
+}
+
+.teammate {
+  display: grid;
+  margin: $small-size;
+  gap: $small-size 0;
+
+  &__photo {
+    display: flex;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 46px;
+    background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  &__sub-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+  }
+
+  &__position {
+    font-size: 14px;
+    line-height: 22px;
+    color: #B3B3BA;
+  }
+
+  &__mail {
+    margin: 10px 0;
+    @extend %blue-link;
+  }
+
+  &__linkedin {
+    @extend %blue-link;
+  }
+
+  &__about {
+    display: flex;
+    flex-wrap: wrap;
+
+    padding-top: $small-size;
+    border-top: 4px solid #E6E6F0;
+
+    @extend %standard-text;
+    color: #000;
+  }
+}
+
+.about__category {
+  margin-top: $small-size;
+}
+
+.about__title {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #323264;
+}
+
+@media screen and (min-width: 768px) {
+
+  .teammate {
+    grid-template-columns: 300px 1fr;
+    gap: $small-size $small-size;
+    margin: $size;
+
+
+    &__photo {
+      height: 375px;
+      object-fit: cover;
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    &__info {
+      flex-grow: 1;
+      align-self: center;
+      margin: 0;
+      grid-area: 1 / 2 / 2 / 3;
+    }
+
+    &__about {
+      grid-area: 2 / 1 / 3 / 3; 
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .teammate {
+    gap: $small-size $size;
+      &__photo {
+      grid-area: 1 / 1 / 3 / 2;
+    }
+
+    &__info {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+
+    &__about {
+      grid-area: 2 / 2 / 3 / 3; 
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .teammate {
+    grid-template-columns: 400px 1fr;
+    gap: $small-size $size;
+    margin: $size 180px;
+      &__photo {
+        height: 500px;
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .teammate {
+    margin: $size 280px;
+  }
+}

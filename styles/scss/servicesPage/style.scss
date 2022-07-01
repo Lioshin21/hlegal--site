@@ -1,0 +1,37 @@
+$size: 30px;
+$big-size: 60px;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  font-size: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+@import '../bg-gradient';
+@import '../header/header';
+@import '../header/header-sub';
+@import './services';
+@import '../brands';
+@import '../footer/footer';
+
+.section__title {
+  margin-top: $size;
+
+  @media screen and (min-width: 768px) {
+    margin: $big-size 0 $size;
+  }
+}
+
+.brands {
+  margin-top: 80px;
+}

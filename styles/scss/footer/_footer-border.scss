@@ -1,0 +1,144 @@
+$size: 30px;
+
+%font-medium {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+%flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.footer-background {
+  background-color: #f5f5f5;
+}
+
+.footer {
+  @extend %flex-center;
+  flex-direction: column;
+  margin: 0 $size;
+  padding: $size 0;
+  border-top: 2px solid #E6E6F0;
+
+  &__address {
+    @extend %flex-center;
+    @extend %font-medium;
+    flex-direction: column;
+    font-weight: 400;
+    color: #323264;
+
+    &_map {
+      margin-top: 10px;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #24A3FF;
+    }
+  }
+
+  &__contacts {
+    @extend %flex-center;
+    @extend %font-medium;
+    flex-direction: column;
+    margin-top: 20px;
+    font-weight: 700;
+  }
+
+  &__facebook:hover {
+    & path {
+      fill: #F0145A;
+    }
+  }
+
+  &__tel {
+    margin: 10px 0;
+    color: #46466E;
+  }
+
+  &__mail {
+    color: #24A3FF;
+
+    &:hover {
+      color: #F0145A;
+    }
+  }
+
+  &__copy {
+    margin-top: $size;
+    font-weight: 400;
+    @extend %font-medium;
+    color: #B3B3BA;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    margin: 0 60px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    &__address {
+      flex-direction: row;
+      align-items: baseline;
+      margin: 0;
+
+      &_map {
+        &::before {
+          margin: 0 10px;
+          content: "";
+          display: inline-block;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: #B3B3BA;
+          margin-bottom: 2px;
+        }
+      }
+    }
+
+    &__contacts {
+      flex-direction: row;
+      order: 1;
+      flex-basis: 100%;
+    }
+
+    &__tel {
+
+      &::before,
+      &::after {
+        margin: 0 10px;
+        content: "";
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #B3B3BA;
+        margin-bottom: 2px;
+      }
+    }
+
+    &__copy {
+      margin: 0;
+    }
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    margin: 0 60px;
+    padding: $size 0;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .footer {
+    margin: 0 160px;
+    padding: $size 0;
+  }
+}

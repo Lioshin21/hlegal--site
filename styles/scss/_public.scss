@@ -1,0 +1,136 @@
+$size: 30px;
+$big-size: 60px;
+
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background: #F5F5FA;
+}
+
+.public {
+  padding: $size;
+  padding-bottom: $size !important;
+
+  & .section__link {
+    margin: 0;
+  }
+
+  & .section__title {
+    margin-top: 5px;
+    font-size: $size;
+    line-height: 37px;
+  }
+
+  &__cards {
+    @extend %flex-column;
+    margin-top: $size;
+    gap: $size;
+  }
+
+  &__card {
+    @extend %flex-column;
+    border-radius: 8px;
+    background: #fff;
+    transition: all 0.3s linear;
+
+    &:hover {
+      transform: scale(1.1);
+
+      .public-card__title {
+        color: #F0145A;
+      }
+    }
+
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+.public-card__info {
+  @extend %flex-column;
+  padding: $size;
+}
+
+.public-card__title {
+  color: #24A3FF;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  transition: all 0.3s linear;
+}
+
+.public-card__data {
+  margin: 15px 0;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #B3B3BA;
+}
+
+.public-card__description {
+  border-top: 4px solid #E6E6F0;
+  padding-top: 15px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+}
+
+@media screen and (min-width: 768px) {
+  .public {
+    padding: $big-size;
+
+    & .section__title {
+      font-size: 38px;
+      line-height: 46px;
+    }
+
+    &__cards {
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    &__card {
+      flex-basis: calc(50% - 30px);
+    }
+
+    &__card:last-child {
+      flex-grow: 1;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .public {
+    &__cards {
+      flex-wrap: nowrap;
+    }
+
+    &__card {
+      margin-top: 0;
+      flex: 0 0 calc((100vw - 180px)/3);
+    }
+
+    &__card:last-child {
+      margin-top: 0;
+      flex-grow: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .public {
+    padding: $size 160px;
+
+    &__card {
+      flex-basis: calc((100vw - 380px)/3);
+    }
+  }
+}

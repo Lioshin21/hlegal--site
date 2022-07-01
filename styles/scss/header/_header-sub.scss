@@ -1,0 +1,53 @@
+.header {
+  &__logo {
+    display: flex;
+    justify-content: center;
+
+    &>.small-slash {
+      margin: 0 4px;
+    }
+
+    &>.big-slash {
+      display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+      &>.small-slash {
+        display: none;
+      }
+
+      &>.big-slash {
+        display: block;
+        margin: 0 4px;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    @media screen and (min-width: 768px) {
+      & {
+        font-size: 36px;
+        line-height: 44px;
+      }
+    }
+  }
+}
+
+
+.nav {
+  &__item-active {
+    border-color: #F0145A;
+
+    & > .nav__link {
+      color: #F0145A;
+    }
+
+    &:hover {
+      border-color: #F0145A;
+    }
+  }
+}

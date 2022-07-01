@@ -1,0 +1,91 @@
+$size: 30px;
+$big-size: 60px;
+
+.team {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  font-size: 0;
+  margin: 50px $size 0;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    background: #F5F5FA;
+    border-radius: 12px;
+  }
+
+  &__photo {
+    object-fit: cover;
+    height: 500px;
+    border-radius: 12px 12px 0 0;
+  }
+
+  &__quote {
+    padding: $size;
+    overflow-wrap: break-word;
+
+    & h3 {
+      font-size: $size;
+      line-height: 37px;
+    }
+
+    &>.section__link {
+      margin: 0;
+    }
+  }
+
+  &__author {
+    margin-top: $size;
+    color: #B3B3BA;
+
+    & span {
+      display: block;
+      margin-top: 6px;
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team {
+    margin: 80px $big-size 0;
+
+    &__quote h3 {
+      font-size: 38px;
+      line-height: 46px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .team {
+    &__item {
+      flex-direction: row;
+    }
+
+    &__photo {
+      border-radius: 12px 0 0 12px;
+      width: 400px;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .team__photo {
+    height: 344px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .team {
+    margin: 80px 160px 0;
+
+    &__photo {
+      height: 298px;
+    }
+  }
+}
