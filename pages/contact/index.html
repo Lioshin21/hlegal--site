@@ -112,10 +112,10 @@
       </div>
       <div class="form__feedback">
         <h2 class="form__subtitle">How to answer you?</h2>
-        <label for="tel">Enter a number for example (+380-00-000-00-00)</label>
+        <label for="tel"></label>
         <input type="tel" placeholder="Phone number" id="tel" name="tel"
           pattern="[+]{1}[380]{3}-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
-        <input type=" email" placeholder="Email" id="email" name="email" required>
+        <input type="email" placeholder="Email" id="email" name="email" required>
       </div>
       <input class="button-blue" type="submit" value="Send message">
     </form>
@@ -152,6 +152,18 @@
       </span>
     </footer>
   </section>
+
+  <script>
+    const telForm = document.getElementById('tel');
+
+    telForm.addEventListener("input", () => {
+      if (!telForm.checkValidity()) {
+        telForm.setCustomValidity('Enter a number for example (+380-00-000-00-00)');
+      } else {
+        telForm.setCustomValidity("");
+      }
+    });
+  </script>
 </body>
 
 
