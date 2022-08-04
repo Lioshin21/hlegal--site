@@ -1,4 +1,7 @@
 $small-size: 30px;
+$size: 60px;
+$big-size: 180px;
+$max-size: 280px;
 
 %flex-column {
   display: flex;
@@ -12,19 +15,22 @@ $small-size: 30px;
   font-weight: 700;
 }
 
-
 .info {
   @extend %flex-column;
   font-weight: 400;
   font-size: 21px;
   line-height: 30px;
-  
+  gap: 30px;
 
   &__address {
     color: #323264;
     padding-bottom: $small-size;
-    margin-bottom: $small-size;
     border-bottom: 4px solid #E6E6F0;
+  }
+
+
+  &-tel-mail__container {
+    @extend %flex-column;
   }
 
   &__tel {
@@ -33,14 +39,13 @@ $small-size: 30px;
   }
 
   &__mail {
-    align-self: flex-start;
     margin-top: 15px;
+    align-self: flex-start;
     color: #24A3FF;
   }
 
   &__facebook {
     &-wrapper {
-      margin-top: $small-size;
       padding-top: $small-size;
       border-top: 4px solid #E6E6F0;
     }
@@ -85,10 +90,13 @@ $small-size: 30px;
   background: #F5F5FA;
   border-radius: 12px;
 
-  & input:not(.button-blue), textarea {
+  & input:not(.button-blue),
+  textarea {
     border: 1px solid #FFFFFF;
     border-radius: 8px;
     padding: 15px;
+    min-width: 100%;
+    max-width: 100%;
 
     &::placeholder {
       color: #B3B3BA;
@@ -97,10 +105,10 @@ $small-size: 30px;
     &:focus {
       border: 1px solid #24A3FF;
     }
+  }
 
-    & #message {
-      height: 130px;
-    }
+  & textarea {
+    height: 130px;
   }
 
   &__title {
@@ -128,5 +136,36 @@ $small-size: 30px;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #B3B3BA;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts {
+    margin: $size;
+    gap: $size;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contacts {
+    flex-direction: row;
+  }
+
+  .info, .form {
+    flex-basis: 50%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .contacts {
+    margin-left: $big-size;
+    margin-right: $big-size;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .contacts {
+    margin-left: $max-size;
+    margin-right: $max-size;
   }
 }

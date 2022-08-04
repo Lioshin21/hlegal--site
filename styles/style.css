@@ -363,10 +363,10 @@ input[type="checkbox"] {
     padding: 30px 0;
     border-top: 4px solid rgba(255, 255, 255, 0.3);
     list-style-type: none; }
+    .skills-description__list .item-enable {
+      display: block; }
   .skills-description__item {
     display: none; }
-    .skills-description__item:nth-child(1) {
-      display: block; }
     .skills-description__item_title {
       font-weight: 700;
       font-size: 20px;

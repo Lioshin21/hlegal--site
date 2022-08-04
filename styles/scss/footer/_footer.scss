@@ -20,6 +20,10 @@ $max-size: 160px;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    &__copy {
+      margin-top: $size;
+      order: 1;
+    }
   }
 }
 
@@ -27,6 +31,11 @@ $max-size: 160px;
   .footer {
     padding: $size $big-size;
     flex-direction: row;
+  
+    &__copy {
+      order: 0;
+      margin-top: 0;
+    }
   }
 }
 

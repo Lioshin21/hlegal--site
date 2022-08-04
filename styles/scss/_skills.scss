@@ -29,7 +29,7 @@ $indent-big: 60px;
       background-clip: text;
     }
 
-    & + & {
+    &+& {
       margin-left: $indent;
     }
   }
@@ -50,14 +50,14 @@ $indent-big: 60px;
       padding: $indent 0;
       border-top: 4px solid rgba(255, 255, 255, 0.3);
       list-style-type: none;
+
+      & .item-enable {
+        display: block;
+      }
     }
 
     &__item {
       display: none;
-
-      &:nth-child(1) {
-        display: block;
-      }
 
       &_title {
         font-weight: 700;
@@ -111,11 +111,12 @@ $indent-big: 60px;
       margin: 0;
       padding-right: 47px;
     }
+
     &__item {
       flex-shrink: 0;
     }
 
-    &__item + &__item {
+    &__item+&__item {
       margin-top: $indent;
     }
 
