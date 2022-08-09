@@ -5,13 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>hlegal</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../styles/glide.core.min.css">
-  <link rel="stylesheet" href="../../styles/glide.theme.min.css">
-  <link rel="stylesheet" href="../../styles/scss/aboutPage/style.css">
+  <title>Publications</title>
+  <link rel="stylesheet" href="../../styles/scss/publicPage/style.css">
 </head>
 
 <body>
@@ -46,7 +41,7 @@
       <svg class="big-slash" width="21" height="47" viewBox="0 0 21 47" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1752 0H21L5.82482 47H0L15.1752 0Z" fill="#F0145A" />
       </svg>
-      <span class="header__title">about</span>
+      <span class="header__title">publications</span>
     </div>
     <input type="checkbox" id="burger-toggle" />
     <label for="burger-toggle" class="burger-nav">
@@ -63,8 +58,8 @@
             </svg>
           </label>
         </li>
-        <li class="nav__item nav__item-active">
-          <a class="nav__link" href="#">about us</a>
+        <li class="nav__item">
+          <a class="nav__link" href="../about/index.html">about us</a>
         </li>
         <li class="nav__item">
           <a class="nav__link" href="../services/index.html">services</a>
@@ -72,8 +67,8 @@
         <li class="nav__item">
           <a class="nav__link" href="../team/index.html">team</a>
         </li>
-        <li class="nav__item">
-          <a class="nav__link" href="../publics/index.html">publications</a>
+        <li class="nav__item nav__item-active">
+          <a class="nav__link" href="#">publications</a>
         </li>
         <li class="nav__item">
           <a class="nav__link" href="../contact/index.html">contact</a>
@@ -81,82 +76,116 @@
       </ul>
     </nav>
   </header>
-  <section class="about">
-    <div class="about-wrapper">
-      <article class="about__info">
-        <h2 class="about__title">We turn over the idea of legal services</h2>
-        <p class="about__description">
-          Consolidating many years of experience and practice, the company's lawyers accompany complex projects and
-          achieve the adoption of a number of decisions that are important for the industry. Many people form the
-          practice
-          of applying the law of the sea in Ukraine.
-          <br><br>
-          HLEGAL is a reliable business partner, confirmed by stable cooperation with international law firms, the trust
-          of large Ukrainian and international companies, and the recognition of professional ratings.
-        </p>
-      </article>
-      <ul class="statistic__list">
-        <li class="statistic__item">
-          <img src="../../images/about/statictic-svg/flag.svg" alt="logo">
-          <h6 class="statistic__number">10+</h6>
-          <p class="statistic__description">years of relevant experience</p>
-        </li>
-        <li class="statistic__item">
-          <img src="../../images/about/statictic-svg/bag.svg" alt="logo">
-          <h6 class="statistic__number">30+</h6>
-          <p class="statistic__description">active clients who entrust us with their orders on a monthly basis</p>
-        </li>
-        <li class="statistic__item">
-          <img src="../../images/about/statictic-svg/star.svg" alt="logo">
-          <h6 class="statistic__number">500+</h6>
-          <p class="statistic__description">hours of pro bono work annually</p>
-        </li>
-      </ul>
+  <section class="public">
+    <div class="buttons__switch">
+      <a href="#" class="button__switch-news buttons__switch-active">news</a>
+      <a href="#" class="button__switch-articles">articles</a>
     </div>
-    <article class="central-img">
-      <span>TEAM</span>
-    </article>
-    <article class="about__info">
-      <h2 class="about__title">Quality is what we care about the most.</h2>
-      <p class="about__description">
-        The historically unchanged legal profession has begun to reformat in recent years. Clients are feeling this, but
-        law firms are still resisting evolution. Clients need convenience, simplicity, transparent payment. Google, IBM
-        WatsOn, Symantec Clearwell prove that the technological revolution in legal services has begun and is imminent.
-        <br> <br>
-        Quality is what we care about the most.
-        <br><br>
-        It's simple. If you are unhappy with our work, we will refund your money. We trust our clients. And we want our
-        clients to trust us too.
-      </p>
-    </article>
-  </section>
-  <section class="achievments">
-    <h5 class="achievments__title">
-      achievments
-    </h5>
-    <div class="glide">
-      <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides achievments__logos">
-          <li class="glide__slide achievments__logo">
-            <img src="../../images/about/achievments/Achievment-1.png" alt="logo">
-          </li>
-          <li class="glide__slide achievments__logo">
-            <img src="../../images/about/achievments/Achievment-2.png" alt="logo">
-          </li>
-          <li class="glide__slide achievments__logo">
-            <img src="../../images/about/achievments/Achievment-3.png" alt="logo">
-          </li>
-          <li class="glide__slide achievments__logo">
-            <img src="../../images/about/achievments/Achievment-4.png" alt="logo">
-          </li>
-        </ul>
-      </div>
-      <div class="glide__bullets" data-glide-el="controls[nav]">
-        <button class="glide__bullet" data-glide-dir="=0"></button>
-        <button class="glide__bullet" data-glide-dir="=1"></button>
-        <button class="glide__bullet" data-glide-dir="=2"></button>
-        <button class="glide__bullet" data-glide-dir="=3"></button>
-      </div>
+    <ul class="public__cards">
+      <li class="public__card">
+        <a href="#" class="public__link">
+          <img src="../../images/publicpage/firstcard.png" class="public__photo" />
+          <div class="public__info">
+            <h2 class="public__title">
+              Equity associate
+            </h2>
+            <span class="public__data">
+              April 22
+            </span>
+            <p class="public__description">
+              I'm a jun on projects. I am a co-owner of a law firm. How it happened. Before entering my parents told me
+              that if I…
+            </p>
+          </div>
+        </a>
+      </li>
+      <li class="public__card">
+        <a href="#" class="public__link">
+          <img src="../../images/publicpage/secondcard.png" class="public__photo" />
+          <div class="public__info">
+            <h2 class="public__title">
+              Penalty for the Good Corporation: what will happen to Google and others for violating the GDPR
+            </h2>
+            <span class="public__data">
+              September 29
+            </span>
+            <p class="public__description">
+              And why the recovery of 50 million euros could be a fateful precedent According to Mind.ua January 21
+              National Commission for Data Protection.
+            </p>
+          </div>
+        </a>
+      </li>
+      <li class="public__card">
+        <a href="#" class="public__link">
+          <img src="../../images/publicpage/thirdcard.png" class="public__photo" />
+          <div class="public__info">
+            <h2 class="public__title">
+              Millennial Testament
+            </h2>
+            <span class="public__data">
+              August 19
+            </span>
+            <p class="public__description">
+              What and how modern vloggers, opinion leaders and crypto-millionaires will inherit A typical legacy of the
+              Ukrainian generation X looks like this: an apartment in…
+            </p>
+          </div>
+        </a>
+      </li>
+      <li class="public__card">
+        <a href="#" class="public__link">
+          <img src="../../images/publicpage/fourthcard.png" class="public__photo" />
+          <div class="public__info">
+            <h2 class="public__title">
+              Language Law: How to Make Your Website Relevant
+            </h2>
+            <span class="public__data">
+              August 19
+            </span>
+            <p class="public__description">
+              Natalia Kyryk, head of content studio Wordfactory.ua First, it's beautiful! This is the number one
+              argument in favor of the Ukrainian-language site. Secondly, it is effective. IN…
+            </p>
+          </div>
+        </a>
+      </li>
+      <li class="public__card">
+        <a href="#" class="public__link">
+          <img src="../../images/publicpage/fifth.png" class="public__photo" />
+          <div class="public__info">
+            <h2 class="public__title">
+              Reimbursement of the child's tuition fees in kindergarten and school
+            </h2>
+            <span class="public__data">
+              February 5, 2018
+            </span>
+            <p class="public__description">
+              What we are talking about In June this year, the Verkhovna Rada amended the Tax Code of Ukraine. From now
+              on, parents who receive an official…
+            </p>
+          </div>
+        </a>
+      </li>
+      <li class="public__card">
+        <a href="#" class="public__link">
+          <img src="" class="public__photo" />
+          <div class="public__info">
+            <h2 class="public__title">
+              Currency control is dead, long live currency control!
+            </h2>
+            <span class="public__data">
+              June 14, 2018
+            </span>
+            <p class="public__description">
+              Experts hold conferences, round tables and other events on "liberalization of currency legislation."
+              Lawyers-experts-novelists rub their fingers about "ctrl + c / ctrl + v".
+            </p>
+          </div>
+        </a>
+      </li>
+    </ul>
+    <button class="button-blue">More publications</button>
   </section>
   <section class="footer-background">
     <footer class="footer">
@@ -190,15 +219,6 @@
       </span>
     </footer>
   </section>
-  <script src="../../js/glide.min.js"></script>
-  <script>
-    new Glide(".glide", {
-      animationDuration: 500,
-      perView: 1,
-      type: 'carousel',
-    }).mount();
-  </script>
 </body>
-
 
 </html>

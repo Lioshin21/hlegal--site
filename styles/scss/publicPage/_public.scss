@@ -1,0 +1,124 @@
+$min-size: 30px;
+$size: 60px;
+
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.public {
+  padding: $min-size;
+  gap: $min-size;
+  @extend %flex-column;
+  align-items: center;
+  font-weight: 700;
+  background: #F5F5FA;
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $min-size;
+    justify-content: stretch;
+  }
+
+  &__card {
+    background: #FFFFFF;
+    border-radius: 8px;
+    transition: all 0.3s linear;
+
+    &:hover {
+      transform: scale(1.1);
+
+      .public__title {
+        color: #F0145A;
+      }
+    }
+  }
+
+  &__link {
+    @extend %flex-column;
+  }
+
+  &__info {
+    margin: $min-size;
+    @extend %flex-column;
+    gap: 15px;
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 20px;
+    color: #24A3FF;
+    transition: all 0.3s linear;
+  }
+
+  &__data {
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #B3B3BA;
+  }
+
+  &__description {
+    padding-top: 15px;
+    border-top: 4px solid #E6E6F0;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #000000;
+  }
+}
+
+.buttons__switch {
+  background: #E6E6F0;
+  border-radius: 12px;
+  padding: 2px;
+
+  display: flex;
+  gap: 2px;
+
+
+  & a {
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #323264;
+  }
+
+  &-active {
+    background: #FFFFFF;
+  }
+
+  & a:not(.buttons__switch-active):hover {
+    background: #F5F5FA;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .public {
+    padding: $min-size $size;
+    margin-top: $size;
+  }
+
+  .public__card {
+    width: calc((100% - 30px)/2);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .public__card {
+    width: calc((100% - 60px)/3);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .public {
+    padding: $min-size 160px;
+  }
+}
